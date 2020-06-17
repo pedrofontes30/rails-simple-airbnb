@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<!-- <p id="notice"><%= notice %></p>
 
 <p>
   <strong>Name:</strong>
@@ -27,3 +27,44 @@
 
 <%= link_to 'Edit', edit_flat_path(@flat) %> |
 <%= link_to 'Back', flats_path %>
+ -->
+
+<div class="card-img-top w-100 hero" alt="flat"></div>
+
+<div class="container-custom d-flex">
+  <div class='mr-3'>
+    <div class="card card-custom mb-3">
+      <div class="card-body">
+        <h5 class="font-weight-bold"><%= @flat.name %></h5>
+        <p><%= @flat.address %></p>
+      </div>
+    </div>
+    <div class="card card-custom">
+      <div class="card-body">
+        <h5 class="font-weight-bold">A bit more about this flat...</h5>
+        <p><%= @flat.description %></p>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="card card-custom mb-3">
+      <div class="card-body">
+        <h5 class="font-weight-bold">Details</h5>
+        <div class="d-flex">
+          <p class='pr-2'><%=icon('fas', 'user-friends')%> <%= @flat.number_of_guests %></p>
+          <p><%=icon('fas', 'euro-sign')%> <%= @flat.price_per_night.to_s %></p>
+        </div>
+      </div>
+    </div>
+    <div class="card card-custom">
+      <div class="card-body">
+        <h5 class="font-weight-bold">Share</h5>
+        <div class="d-flex justify-content-around">
+          <%= link_to icon('fab', 'facebook-square'), '#' %>
+          <%= link_to icon('fab', 'twitter-square'), '#' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

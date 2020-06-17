@@ -11,3 +11,38 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+.hero {
+  height: 300px !important;
+  background-image: url('https://source.unsplash.com/random/800x600/?airbnb');
+  background-size: cover;
+}
+
+.container-custom {
+  position: absolute;
+  top: 250px;
+  right: 15%;
+  width: 70%;
+}
+
+.card-custom {
+  border-radius: 4px;
+  border: 0;
+  box-shadow: 0 0 3px rgba(0,0,0,0.2);
+}
+
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+nav {
+  a {
+    color: rgba(0,0,0,0.7);
+    font-size: 20px;
+  }
+  &:hover {
+    color: rgba(0,0,0,0.9);
+  }
+}

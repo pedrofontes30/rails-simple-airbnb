@@ -12,6 +12,7 @@
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.submit 'Add', class: 'btn btn-primary' %>
+    <%= link_to 'Back', flats_path, class: 'btn btn-danger'%>
   </div>
 <% end %>
